@@ -1,15 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
 
 namespace IMProductSpider
 {
     class Program
     {
+        const string ProductDetailsUrl_Config_Key = "ProductDetailsUrl";
+        
         static void Main(string[] args)
         {
+            string ProductDetailsUrl = ConfigurationManager.AppSettings.Get(ProductDetailsUrl_Config_Key);
+            Console.WriteLine(ProductDetailsUrl);
+            Console.ReadLine();
         }
     }
 }
