@@ -22,8 +22,8 @@ namespace ProductSpider.ConsoleApp
             var skuReader = new SkuReader();
             var skuList = skuReader.Load(inputFile);
 
-            var productDetails = new List<ProductDetails>();
             var productSpider = new IMProductSpider(ProductDetailsUrl, UrlParams);
+            var productDetails = new List<ProductDetails>();
 
             Console.WriteLine("Getting product details...");
             object lockResults = new object();
@@ -37,9 +37,11 @@ namespace ProductSpider.ConsoleApp
                 }
             });
 
+            Console.WriteLine($"Sorting product details...");
+            var outputProducts = productDetails.ToInitialOrder(skuList);
             Console.WriteLine($"Saving CSV file {outputFile}...");
             var csvWriter = new CsvWriter();
-            csvWriter.Save(outputFile, productDetails);
+            csvWriter.Save(outputFile, outputProducts);
 
             Console.WriteLine($"Done! CSV saved to {outputFile}.");
             Console.ReadLine();
