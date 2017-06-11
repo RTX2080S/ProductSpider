@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace ProductSpider.ConsoleApp
+namespace ProductSpider.ConsoleApp.IO
 {
     public class SkuReader
     {

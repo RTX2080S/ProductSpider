@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using ProductSpider.Clients;
 using ProductSpider.Models;
+using ProductSpider.ConsoleApp.IO;
+using ProductSpider.ConsoleApp.Helpers;
 
 namespace ProductSpider.ConsoleApp
 {

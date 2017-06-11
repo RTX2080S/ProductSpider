@@ -45,10 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConfigKeys.cs" />
-    <Compile Include="CsvWriter.cs" />
-    <Compile Include="ProductSortingHelper.cs" />
-    <Compile Include="SkuReader.cs" />
+    <Compile Include="Helpers\ConfigKeys.cs" />
+    <Compile Include="IO\CsvWriter.cs" />
+    <Compile Include="Helpers\ProductSortingHelper.cs" />
+    <Compile Include="IO\SkuReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
