@@ -41,7 +41,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IMProductSpider.cs" />
+    <Compile Include="Interfaces\IIMProductSpider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProductSpider.Models\ProductSpider.Models.csproj">
+      <Project>{E757765F-28E5-4BF9-9120-F3FD081F23AB}</Project>
+      <Name>ProductSpider.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProductSpider.Services\ProductSpider.Services.csproj">
+      <Project>{AD78E8AA-EAD4-4B89-8E83-3D125A30E7B9}</Project>
+      <Name>ProductSpider.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

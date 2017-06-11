@@ -54,6 +54,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ProductSpider.Clients\ProductSpider.Clients.csproj">
+      <Project>{CCC20E6A-78C9-4AFC-B5BF-A9791FB065BE}</Project>
+      <Name>ProductSpider.Clients</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ProductSpider.Models\ProductSpider.Models.csproj">
       <Project>{E757765F-28E5-4BF9-9120-F3FD081F23AB}</Project>
       <Name>ProductSpider.Models</Name>
