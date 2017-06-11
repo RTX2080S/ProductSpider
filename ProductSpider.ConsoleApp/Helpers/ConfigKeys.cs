@@ -1,5 +1,5 @@
 ﻿
-namespace ProductSpider.ConsoleApp
+namespace ProductSpider.ConsoleApp.Helpers
 {
     public static class ConfigKeys
     {
