@@ -1,7 +1,6 @@
 ﻿using ProductSpider.Services.Interfaces;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System;
 
 namespace ProductSpider.Services
 {

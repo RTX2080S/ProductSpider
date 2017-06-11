@@ -1,5 +1,4 @@
-﻿using System;
-using ProductSpider.Clients.Interfaces;
+﻿using ProductSpider.Clients.Interfaces;
 using ProductSpider.Models;
 using ProductSpider.Services;
 using ProductSpider.Services.Interfaces;
