@@ -1,10 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ProductSpider.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProductSpider.Services.UnitTest
 {
@@ -31,12 +26,23 @@ namespace ProductSpider.Services.UnitTest
         }
 
         [TestMethod]
+        public void ContentReader_get_correct_result_when_tags_empty()
+        {
+            string document = "<p>abc</p>";
+            var expected = string.Empty;
+            contentReader.SetContext(document);
+            var actual = contentReader.ReadContent("", string.Empty);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void ContentReader_get_correct_result_when_tags_not_set()
         {
             string document = "<p>abc</p>";
             var expected = string.Empty;
             contentReader.SetContext(document);
-            var actual = contentReader.ReadContent("", null);
+            var actual = contentReader.ReadContent(null, null);
 
             Assert.AreEqual(expected, actual);
         }
