@@ -1,4 +1,5 @@
-﻿using ProductSpider.Services;
+﻿using ProductSpider.Models;
+using ProductSpider.Services;
 using System;
 using System.Configuration;
 using System.IO;
@@ -25,15 +26,18 @@ namespace ProductSpider.Client
 
             Console.WriteLine($"Downloading content -> {productUrl}...");
 
-            Task<string> downloadTask = httpClient.DownloadDocumentAsyn(productUrl);
+            var downloadTask = httpClient.DownloadDocumentAsyn(productUrl);
             downloadTask.Wait();
 
             var content = downloadTask.Result;
 
-            using (StreamWriter sw = new StreamWriter("file.html"))
-            {
-                sw.Write(content);
-            }
+            var contentReader = new ContentReader();
+            contentReader.SetContext(content);
+
+            var productDetails = new ProductDetails();
+            productDetails.Url = productUrl;
+            productDetails.Title = contentReader.ReadContent("<title>", " - Product Details").Trim();
+            productDetails.ImageUrl = contentReader.ReadContent("<a class=\"change-cursor\" href=\"", "\">").Trim();
 
             Console.WriteLine("Done! ");
 

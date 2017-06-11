@@ -26,7 +26,9 @@ namespace ProductSpider.Services
                 return string.Empty;
 
             int startingPoint = documentContext.IndexOf(startingTag);
-            int endPoint = documentContext.IndexOf(endTag);
+
+            // Searching endTag from the Starting Point, it would be pointless searching the whole doc for the endTag
+            int endPoint = documentContext.IndexOf(endTag, startingPoint);
 
             // Tags not in correct order - reject
             if (startingPoint > endPoint)
