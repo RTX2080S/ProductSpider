@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Configuration;
-using ProductSpider.Models;
-using ProductSpider.Services;
 using ProductSpider.Clients;
 
 namespace ProductSpider.ConsoleApp
