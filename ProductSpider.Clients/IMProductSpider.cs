@@ -38,6 +38,7 @@ namespace ProductSpider.Clients
             contentReader.SetContext(content);
 
             var productDetails = new ProductDetails();
+            productDetails.SKU = sku;
             productDetails.Url = productUrl;
             productDetails.Title = contentReader.ReadContent("<title>", " - Product Details").Trim();
             productDetails.ImageUrl = contentReader.ReadContent("<a class=\"change-cursor\" href=\"", "\">").Trim();
