@@ -1,11 +1,9 @@
-﻿using ProductSpider.Models;
-using ProductSpider.Services;
-using System;
+﻿using System;
 using System.Configuration;
-using System.IO;
-using System.Threading.Tasks;
+using ProductSpider.Models;
+using ProductSpider.Services;
 
-namespace ProductSpider.Client
+namespace ProductSpider.ConsoleApp
 {
     class Program
     {

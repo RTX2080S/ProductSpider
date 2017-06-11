@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.Client", "ProductSpider\ProductSpider.Client.csproj", "{2CBC890A-1A62-4C9D-A4D3-F273AEB69E7D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.ConsoleApp", "ProductSpider.ConsoleApp\ProductSpider.ConsoleApp.csproj", "{2CBC890A-1A62-4C9D-A4D3-F273AEB69E7D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.Services", "ProductSpider.Services\ProductSpider.Services.csproj", "{AD78E8AA-EAD4-4B89-8E83-3D125A30E7B9}"
 EndProject
@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.Services.Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.Models", "ProductSpider.Models\ProductSpider.Models.csproj", "{E757765F-28E5-4BF9-9120-F3FD081F23AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.Core", "ProductSpider.Core\ProductSpider.Core.csproj", "{CCC20E6A-78C9-4AFC-B5BF-A9791FB065BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.Clients", "ProductSpider.Clients\ProductSpider.Clients.csproj", "{CCC20E6A-78C9-4AFC-B5BF-A9791FB065BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
