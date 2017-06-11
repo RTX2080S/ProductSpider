@@ -8,7 +8,6 @@ namespace ProductSpider.ConsoleApp
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             string ProductDetailsUrl = ConfigurationManager.AppSettings.Get(ConfigKeys.ProductDetailsUrl_Config_Key);
