@@ -17,6 +17,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.Models", "Pro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.Clients", "ProductSpider.Clients\ProductSpider.Clients.csproj", "{CCC20E6A-78C9-4AFC-B5BF-A9791FB065BE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{707E6F7F-CA42-4CB1-9AED-CEA3224BF52C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{3B1EE523-A044-4A04-B022-4167744A9D2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{AD2114A5-0E38-4C51-8D02-881FF4BDBFA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,5 +52,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AD78E8AA-EAD4-4B89-8E83-3D125A30E7B9} = {3B1EE523-A044-4A04-B022-4167744A9D2E}
+		{CA47E9D8-6D37-4BB9-A7B9-2C05475C1AEF} = {707E6F7F-CA42-4CB1-9AED-CEA3224BF52C}
+		{E757765F-28E5-4BF9-9120-F3FD081F23AB} = {3B1EE523-A044-4A04-B022-4167744A9D2E}
+		{CCC20E6A-78C9-4AFC-B5BF-A9791FB065BE} = {AD2114A5-0E38-4C51-8D02-881FF4BDBFA4}
 	EndGlobalSection
 EndGlobal
