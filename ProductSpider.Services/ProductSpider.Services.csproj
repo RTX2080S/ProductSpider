@@ -44,12 +44,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContentReader.cs" />
+    <Compile Include="Helpers\ProductSortingHelper.cs" />
     <Compile Include="Interfaces\IContentReader.cs" />
     <Compile Include="Interfaces\ISKUFormatter.cs" />
     <Compile Include="Interfaces\IHttpClientService.cs" />
+    <Compile Include="IO\ProductCsvWriter.cs" />
+    <Compile Include="IO\SkuInputReader.cs" />
     <Compile Include="SKUFormatter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="HttpClientService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProductSpider.Models\ProductSpider.Models.csproj">
+      <Project>{E757765F-28E5-4BF9-9120-F3FD081F23AB}</Project>
+      <Name>ProductSpider.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

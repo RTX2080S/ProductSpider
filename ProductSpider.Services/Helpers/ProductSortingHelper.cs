@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System.Linq;
+using System.Collections.Generic;
 using ProductSpider.Models;
-using System.Linq;
 
-namespace ProductSpider.CLI.Helpers
+namespace ProductSpider.Services.Helpers
 {
     public static class ProductSortingHelper
     {

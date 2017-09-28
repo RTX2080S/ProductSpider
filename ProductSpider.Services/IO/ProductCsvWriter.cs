@@ -1,22 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using ProductSpider.Models;
 
-namespace ProductSpider.CLI.IO
+namespace ProductSpider.Services.IO
 {
-    public class CsvWriter
-    {        
+    public class ProductCsvWriter
+    {
         public void Save(string outputFile, IList<ProductDetails> productDetails)
         {
             try
             {
                 using (StreamWriter sw = new StreamWriter(outputFile, false))
                 {
-                    foreach (var product in productDetails)
+                    productDetails.ToList().ForEach((product) =>
                     {
                         sw.WriteLine(string.Join(",", new string[] { product.Title, product.Url, product.ImageUrl }));
-                    }
+                    });
                 }
             }
             catch (Exception)

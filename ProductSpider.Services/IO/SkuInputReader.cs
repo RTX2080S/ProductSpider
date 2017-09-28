@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace ProductSpider.CLI.IO
+namespace ProductSpider.Services.IO
 {
-    public class SkuReader
+    public class SkuInputReader
     {
         public IList<int> Load(string inputFile)
         {
@@ -15,10 +15,12 @@ namespace ProductSpider.CLI.IO
                 {
                     while (!sr.EndOfStream)
                     {
-                        int sku;
                         var skuStr = sr.ReadLine();
-                        if (int.TryParse(skuStr, out sku))
+                        if (int.TryParse(skuStr, out int sku))
+                        {
+                            // Add only if the line is valid
                             result.Add(sku);
+                        }
                     }
                 }
                 return result;

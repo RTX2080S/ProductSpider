@@ -46,9 +46,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\ConfigKeys.cs" />
-    <Compile Include="IO\CsvWriter.cs" />
-    <Compile Include="Helpers\ProductSortingHelper.cs" />
-    <Compile Include="IO\SkuReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -65,6 +62,10 @@
     <ProjectReference Include="..\ProductSpider.Models\ProductSpider.Models.csproj">
       <Project>{E757765F-28E5-4BF9-9120-F3FD081F23AB}</Project>
       <Name>ProductSpider.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProductSpider.Services\ProductSpider.Services.csproj">
+      <Project>{ad78e8aa-ead4-4b89-8e83-3d125a30e7b9}</Project>
+      <Name>ProductSpider.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

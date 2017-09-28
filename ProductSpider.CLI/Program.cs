@@ -4,8 +4,8 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using ProductSpider.Clients;
 using ProductSpider.Models;
-using ProductSpider.CLI.IO;
-using ProductSpider.CLI.Helpers;
+using ProductSpider.Services.IO;
+using ProductSpider.Services.Helpers;
 
 namespace ProductSpider.CLI
 {
@@ -21,7 +21,7 @@ namespace ProductSpider.CLI
             Console.WriteLine("Application initializing...");
 
             Console.WriteLine($"Loading input file {inputFile}...");
-            var skuReader = new SkuReader();
+            var skuReader = new SkuInputReader();
             var skuList = skuReader.Load(inputFile);
 
             var productSpider = new IMProductSpider(ProductDetailsUrl, UrlParams);
@@ -42,7 +42,7 @@ namespace ProductSpider.CLI
             Console.WriteLine($"Sorting product details...");
             var outputProducts = productDetails.ToInitialOrder(skuList);
             Console.WriteLine($"Saving CSV file {outputFile}...");
-            var csvWriter = new CsvWriter();
+            var csvWriter = new ProductCsvWriter();
             csvWriter.Save(outputFile, outputProducts);
 
             Console.WriteLine($"Done! CSV saved to {outputFile}.");
