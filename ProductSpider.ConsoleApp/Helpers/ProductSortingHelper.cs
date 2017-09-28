@@ -2,7 +2,7 @@
 using ProductSpider.Models;
 using System.Linq;
 
-namespace ProductSpider.ConsoleApp.Helpers
+namespace ProductSpider.CLI.Helpers
 {
     public static class ProductSortingHelper
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using ProductSpider.Models;
 
-namespace ProductSpider.ConsoleApp.IO
+namespace ProductSpider.CLI.IO
 {
     public class CsvWriter
     {        

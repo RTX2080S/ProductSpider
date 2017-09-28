@@ -4,10 +4,10 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using ProductSpider.Clients;
 using ProductSpider.Models;
-using ProductSpider.ConsoleApp.IO;
-using ProductSpider.ConsoleApp.Helpers;
+using ProductSpider.CLI.IO;
+using ProductSpider.CLI.Helpers;
 
-namespace ProductSpider.ConsoleApp
+namespace ProductSpider.CLI
 {
     class Program
     {
