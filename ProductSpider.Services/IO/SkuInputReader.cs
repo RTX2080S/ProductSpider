@@ -1,10 +1,11 @@
-﻿using System;
+﻿using ProductSpider.Services.IO.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
 namespace ProductSpider.Services.IO
 {
-    public class SkuInputReader
+    public class SkuInputReader : ISkuInputReader
     {
         public IList<int> Load(string inputFile)
         {

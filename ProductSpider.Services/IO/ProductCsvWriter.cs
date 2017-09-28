@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using ProductSpider.Models;
+using ProductSpider.Services.IO.Interfaces;
 
 namespace ProductSpider.Services.IO
 {
-    public class ProductCsvWriter
+    public class ProductCsvWriter : IProductCsvWriter
     {
         public void Save(string outputFile, IList<ProductDetails> productDetails)
         {

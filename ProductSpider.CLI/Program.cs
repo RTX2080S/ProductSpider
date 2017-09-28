@@ -6,19 +6,30 @@ using ProductSpider.Clients;
 using ProductSpider.Models;
 using ProductSpider.Services.IO;
 using ProductSpider.Services.Helpers;
+using Microsoft.Practices.Unity;
+using ProductSpider.CLI.Helpers;
 
 namespace ProductSpider.CLI
 {
     class Program
     {
+        static void InitDependencies()
+        {
+            using (var container = new UnityContainer())
+            {
+                ContainerBootstrapper.RegisterTypes(container);
+            }
+        }
+
         static void Main(string[] args)
         {
+            Console.WriteLine("Application initializing...");
+            InitDependencies();
+
             string ProductDetailsUrl = ConfigurationManager.AppSettings.Get(ConfigKeys.ProductDetailsUrl_Config_Key);
             string UrlParams = ConfigurationManager.AppSettings.Get(ConfigKeys.UrlParams_Config_Key);
             string inputFile = ConfigurationManager.AppSettings.Get(ConfigKeys.Input_File_Config_Key);
             string outputFile = ConfigurationManager.AppSettings.Get(ConfigKeys.Output_File_Config_Key);
-
-            Console.WriteLine("Application initializing...");
 
             Console.WriteLine($"Loading input file {inputFile}...");
             var skuReader = new SkuInputReader();

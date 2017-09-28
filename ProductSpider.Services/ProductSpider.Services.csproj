@@ -48,6 +48,8 @@
     <Compile Include="Interfaces\IContentReader.cs" />
     <Compile Include="Interfaces\ISKUFormatter.cs" />
     <Compile Include="Interfaces\IHttpClientService.cs" />
+    <Compile Include="Interfaces\IProductCsvWriter.cs" />
+    <Compile Include="Interfaces\ISkuInputReader.cs" />
     <Compile Include="IO\ProductCsvWriter.cs" />
     <Compile Include="IO\SkuInputReader.cs" />
     <Compile Include="SKUFormatter.cs" />
