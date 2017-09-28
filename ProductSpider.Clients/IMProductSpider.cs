@@ -10,9 +10,9 @@ namespace ProductSpider.Clients
         protected string ProductDetailsUrl;
         protected string UrlParams;
 
-        protected ISKUFormatter skuFormatter;
-        protected IHttpClientService httpClientService;
-        protected IContentReader contentReader;
+        protected readonly ISKUFormatter skuFormatter;
+        protected readonly IHttpClientService httpClientService;
+        protected readonly IContentReader contentReader;
 
         public IMProductSpider(string productDetailsUrl, string urlParams)
         {

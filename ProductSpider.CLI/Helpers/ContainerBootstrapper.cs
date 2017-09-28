@@ -1,5 +1,6 @@
-﻿using System;
-using Microsoft.Practices.Unity;
+﻿using Microsoft.Practices.Unity;
+using ProductSpider.Services.IO.Interfaces;
+using ProductSpider.Services.IO;
 
 namespace ProductSpider.CLI.Helpers
 {
@@ -7,7 +8,8 @@ namespace ProductSpider.CLI.Helpers
     {
         public static void RegisterTypes(UnityContainer container)
         {
-            throw new NotImplementedException();
+            container.RegisterType<ISkuInputReader, SkuInputReader>();
+            container.RegisterType<IProductCsvWriter, ProductCsvWriter>();
         }
     }
 }
