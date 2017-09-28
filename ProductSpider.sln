@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.CLI", "ProductSpider.ConsoleApp\ProductSpider.CLI.csproj", "{2CBC890A-1A62-4C9D-A4D3-F273AEB69E7D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.CLI", "ProductSpider.CLI\ProductSpider.CLI.csproj", "{2CBC890A-1A62-4C9D-A4D3-F273AEB69E7D}"
 	ProjectSection(ProjectDependencies) = postProject
 		{E757765F-28E5-4BF9-9120-F3FD081F23AB} = {E757765F-28E5-4BF9-9120-F3FD081F23AB}
 		{CCC20E6A-78C9-4AFC-B5BF-A9791FB065BE} = {CCC20E6A-78C9-4AFC-B5BF-A9791FB065BE}
@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.CLI", "Produc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.Services", "ProductSpider.Services\ProductSpider.Services.csproj", "{AD78E8AA-EAD4-4B89-8E83-3D125A30E7B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.Services.UnitTest", "ProductSpider.Servicse.UnitTest\ProductSpider.Services.UnitTest.csproj", "{CA47E9D8-6D37-4BB9-A7B9-2C05475C1AEF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.Services.UnitTest", "ProductSpider.Services.UnitTest\ProductSpider.Services.UnitTest.csproj", "{CA47E9D8-6D37-4BB9-A7B9-2C05475C1AEF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.Models", "ProductSpider.Models\ProductSpider.Models.csproj", "{E757765F-28E5-4BF9-9120-F3FD081F23AB}"
 EndProject
