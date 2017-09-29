@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ProductSpider.Services.Interfaces;
+using ProductSpider.Services.IO;
 
 namespace ProductSpider.Services.UnitTest
 {

@@ -1,7 +1,7 @@
 ﻿using ProductSpider.Services.Interfaces;
 using System;
 
-namespace ProductSpider.Services
+namespace ProductSpider.Services.IO
 {
     public class ContentReader : IContentReader
     {
