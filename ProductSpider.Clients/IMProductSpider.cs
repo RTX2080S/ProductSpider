@@ -1,40 +1,31 @@
 ﻿using ProductSpider.Clients.Interfaces;
 using ProductSpider.Models;
-using ProductSpider.Services;
 using ProductSpider.Services.Interfaces;
 
 namespace ProductSpider.Clients
 {
     public class IMProductSpider : IIMProductSpider
     {
-        protected string ProductDetailsUrl;
-        protected string UrlParams;
-
         protected readonly ISKUFormatter skuFormatter;
-        protected readonly IHttpClientService httpClientService;
+        protected readonly IHttpClientService httpClient;
         protected readonly IContentReader contentReader;
 
-        public IMProductSpider(string productDetailsUrl, string urlParams)
+        public IMProductSpider(ISKUFormatter skuFormatter, IHttpClientService httpClient, IContentReader contentReader)
         {
-            ProductDetailsUrl = productDetailsUrl;
-            UrlParams = urlParams;
-            skuFormatter = new SKUFormatter();
-            httpClientService = new HttpClientService();
-            contentReader = new ContentReader();
+            this.skuFormatter = skuFormatter;
+            this.httpClient = httpClient;
+            this.contentReader = contentReader;
         }
 
-        public ProductDetails GetProductDetailsBySKU(int sku)
+        public ProductDetails GetProductDetailsBySKU(string productDetailsUrl, string urlParams, int sku)
         {
             var formattedSKU = skuFormatter.GetFormattedSKUString(sku);
+            var productUrl = $"{productDetailsUrl}{urlParams}{formattedSKU}";
 
-            var productUrl = $"{ProductDetailsUrl}{UrlParams}{formattedSKU}";
-
-            var downloadTask = httpClientService.DownloadDocumentAsyn(productUrl);
+            var downloadTask = httpClient.DownloadDocumentAsyn(productUrl);
             downloadTask.Wait();
 
             var content = downloadTask.Result;
-
-            var contentReader = new ContentReader();
             contentReader.SetContext(content);
 
             var productDetails = new ProductDetails();

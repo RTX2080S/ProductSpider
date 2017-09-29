@@ -2,23 +2,24 @@
 using System.Configuration;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using ProductSpider.Clients;
 using ProductSpider.Models;
 using ProductSpider.Services.IO;
 using ProductSpider.Services.Helpers;
 using Microsoft.Practices.Unity;
 using ProductSpider.CLI.Helpers;
+using ProductSpider.Services.IO.Interfaces;
+using ProductSpider.Clients.Interfaces;
 
 namespace ProductSpider.CLI
 {
     class Program
     {
+        static UnityContainer container;
+
         static void InitDependencies()
         {
-            using (var container = new UnityContainer())
-            {
-                ContainerBootstrapper.RegisterTypes(container);
-            }
+            container = new UnityContainer();
+            ContainerBootstrapper.RegisterTypes(container);
         }
 
         static void Main(string[] args)
@@ -32,17 +33,17 @@ namespace ProductSpider.CLI
             string outputFile = ConfigurationManager.AppSettings.Get(ConfigKeys.Output_File_Config_Key);
 
             Console.WriteLine($"Loading input file {inputFile}...");
-            var skuReader = new SkuInputReader();
+            var skuReader = container.Resolve<ISkuInputReader>();
             var skuList = skuReader.Load(inputFile);
 
-            var productSpider = new IMProductSpider(ProductDetailsUrl, UrlParams);
+            var productSpider = container.Resolve<IIMProductSpider>();
             var productDetails = new List<ProductDetails>();
 
             Console.WriteLine("Getting product details...");
             object lockResults = new object();
             Parallel.ForEach(skuList, sku =>
             {
-                var productResult = productSpider.GetProductDetailsBySKU(sku);
+                var productResult = productSpider.GetProductDetailsBySKU(ProductDetailsUrl, UrlParams, sku);
                 lock (lockResults)
                 {
                     productDetails.Add(productResult);
