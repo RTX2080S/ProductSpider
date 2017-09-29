@@ -3,7 +3,6 @@ using System.Configuration;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using ProductSpider.Models;
-using ProductSpider.Services.IO;
 using ProductSpider.Services.Helpers;
 using Microsoft.Practices.Unity;
 using ProductSpider.CLI.Helpers;
@@ -54,7 +53,7 @@ namespace ProductSpider.CLI
             Console.WriteLine($"Sorting product details...");
             var outputProducts = productDetails.ToInitialOrder(skuList);
             Console.WriteLine($"Saving CSV file {outputFile}...");
-            var csvWriter = new ProductCsvWriter();
+            var csvWriter = container.Resolve<IProductCsvWriter>();
             csvWriter.Save(outputFile, outputProducts);
 
             Console.WriteLine($"Done! CSV saved to {outputFile}.");
