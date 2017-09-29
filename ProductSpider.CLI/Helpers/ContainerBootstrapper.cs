@@ -4,6 +4,7 @@ using ProductSpider.Services.IO;
 using ProductSpider.Services.Interfaces;
 using ProductSpider.Services;
 using ProductSpider.Clients.Interfaces;
+using ProductSpider.Clients;
 
 namespace ProductSpider.CLI.Helpers
 {
@@ -16,7 +17,7 @@ namespace ProductSpider.CLI.Helpers
             container.RegisterType<ISKUFormatter, SKUFormatter>();
             container.RegisterType<IHttpClientService, HttpClientService>();
             container.RegisterType<IContentReader, ContentReader>();
-            container.RegisterType<IIMProductSpider, IIMProductSpider>();
+            container.RegisterType<IIMProductSpider, IMProductSpider>();
         }
     }
 }
