@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.CLI", "Src\ProductSpider.CLI\ProductSpider.CLI.csproj", "{2CBC890A-1A62-4C9D-A4D3-F273AEB69E7D}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -16,13 +16,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.Services.Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.Models", "Src\ProductSpider.Models\ProductSpider.Models.csproj", "{E757765F-28E5-4BF9-9120-F3FD081F23AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.Clients", "Src\ProductSpider.Clients\ProductSpider.Clients.csproj", "{CCC20E6A-78C9-4AFC-B5BF-A9791FB065BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductSpider.Facades", "Src\ProductSpider.Facades\ProductSpider.Facades.csproj", "{CCC20E6A-78C9-4AFC-B5BF-A9791FB065BE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{707E6F7F-CA42-4CB1-9AED-CEA3224BF52C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{3B1EE523-A044-4A04-B022-4167744A9D2E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{AD2114A5-0E38-4C51-8D02-881FF4BDBFA4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Facades", "Facades", "{AD2114A5-0E38-4C51-8D02-881FF4BDBFA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

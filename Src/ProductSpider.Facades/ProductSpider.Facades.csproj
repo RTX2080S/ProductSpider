@@ -7,8 +7,8 @@
     <ProjectGuid>{CCC20E6A-78C9-4AFC-B5BF-A9791FB065BE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProductSpider.Clients</RootNamespace>
-    <AssemblyName>ProductSpider.Clients</AssemblyName>
+    <RootNamespace>ProductSpider.Facades</RootNamespace>
+    <AssemblyName>ProductSpider.Facades</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

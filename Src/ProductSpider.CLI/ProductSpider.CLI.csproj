@@ -83,7 +83,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ProductSpider.Clients\ProductSpider.Clients.csproj">
+    <ProjectReference Include="..\ProductSpider.Facades\ProductSpider.Facades.csproj">
       <Project>{CCC20E6A-78C9-4AFC-B5BF-A9791FB065BE}</Project>
       <Name>ProductSpider.Clients</Name>
     </ProjectReference>
