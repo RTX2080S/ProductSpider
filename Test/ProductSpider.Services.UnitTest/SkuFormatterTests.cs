@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ProductSpider.Services;
 using ProductSpider.Services.Interfaces;
 
@@ -31,6 +30,5 @@ namespace ProductSpider.Servicse.UnitTest
         {
             skuFormatter = null;
         }
-
     }
 }
