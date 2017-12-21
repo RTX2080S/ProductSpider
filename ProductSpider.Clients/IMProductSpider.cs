@@ -1,4 +1,5 @@
-﻿using ProductSpider.Clients.Interfaces;
+﻿using System.Threading.Tasks;
+using ProductSpider.Clients.Interfaces;
 using ProductSpider.Models;
 using ProductSpider.Services.Interfaces;
 
@@ -19,13 +20,19 @@ namespace ProductSpider.Clients
 
         public ProductDetails GetProductDetailsBySKU(string productDetailsUrl, string urlParams, int sku)
         {
+            var fetchProductTask = this.GetProductDetailsBySKUAsync(productDetailsUrl, urlParams, sku);
+            fetchProductTask.Wait();
+            return fetchProductTask.Result;
+        }
+
+        public async Task<ProductDetails> GetProductDetailsBySKUAsync(string productDetailsUrl, string urlParams, int sku)
+        {
             var formattedSKU = skuFormatter.GetFormattedSKUString(sku);
             var productUrl = $"{productDetailsUrl}{urlParams}{formattedSKU}";
 
-            var downloadTask = httpClient.DownloadDocumentAsyn(productUrl);
-            downloadTask.Wait();
+            var downloadTask = await httpClient.DownloadDocumentAsyn(productUrl);
 
-            var content = downloadTask.Result;
+            var content = downloadTask;
             contentReader.SetContext(content);
 
             var productDetails = new ProductDetails();
